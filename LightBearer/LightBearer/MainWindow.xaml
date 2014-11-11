@@ -1,0 +1,160 @@
+﻿<Window x:Class="Lightbearer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="The Lightbearer Assistance by Beat Generation" Height="394" Width="398"
+        Icon="C:\Users\ImieUzytkownika\Desktop\Pochodnie\LightBearer\LightBearer\basin.gif">
+    <Grid Margin="0,0,2,3" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Tarpit" Content="Tarpit Tomb" HorizontalAlignment="Left" Height="25" Margin="0,10,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <Label x:Name="Drefia" Content="Drefia" HorizontalAlignment="Left" Height="25" Margin="0,40,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <Label x:Name="Kazo" Content="Dwacatra Kazzo" HorizontalAlignment="Left" Height="25" Margin="0,70,0,0" VerticalAlignment="Top" Width="99" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="Forb" Content="Forbidden Land" HorizontalAlignment="Left" Height="25" Margin="0,100,0,0" VerticalAlignment="Top" Width="99" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="Hellgate" Content="Hellgate" HorizontalAlignment="Left" Height="25" Margin="0,130,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <Label x:Name="Edron" Content="Edron Hero Cave" HorizontalAlignment="Left" Height="25" Margin="0,160,0,0" VerticalAlignment="Top" Width="109" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="Poh" Content="POH - Venore" HorizontalAlignment="Left" Height="25" Margin="0,190,0,0" VerticalAlignment="Top" Width="99" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="Svar" Content="Svargrond" HorizontalAlignment="Left" Height="25" Margin="0,220,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <Label x:Name="Yala" Content="Yalahar - Hellspawns" HorizontalAlignment="Left" Height="25" Margin="0,245,0,0" VerticalAlignment="Top" Width="121" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="BoneB" Content="BB Island" HorizontalAlignment="Left" Height="25" Margin="0,275,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Height="37" Margin="0,314,0,0" VerticalAlignment="Top" Width="62" Click="StartButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB"/>
+                    <GradientStop Color="#FFDDDDDD"/>
+                    <GradientStop Color="#FF2FA21C" Offset="1"/>
+                    <GradientStop Color="#FFBAD1B7" Offset="0.2"/>
+                    <GradientStop Color="#FF8DC285" Offset="0.975"/>
+                    <GradientStop Color="#FF89C081" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="RestartButton_Copy" Content="Copy raport to clipboard" HorizontalAlignment="Left" Height="37" Margin="9,314,0,0" VerticalAlignment="Top" Width="158" Click="RestartButton_Copy_Click" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFE2CC6A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="TarpitTime" HorizontalAlignment="Left" Height="25" Margin="36,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="DrefiaTime" HorizontalAlignment="Left" Height="25" Margin="36,40,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="KazoTime" HorizontalAlignment="Left" Height="25" Margin="36,70,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="ForbTime" HorizontalAlignment="Left" Height="25" Margin="36,100,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="HellgateTime" HorizontalAlignment="Left" Height="25" Margin="36,130,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="EdronTime" HorizontalAlignment="Left" Height="25" Margin="36,162,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="PohTime" HorizontalAlignment="Left" Height="25" Margin="36,192,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="SvarTime" HorizontalAlignment="Left" Height="25" Margin="36,220,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="YalaTime" HorizontalAlignment="Left" Height="25" Margin="36,250,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="BBTime" HorizontalAlignment="Left" Height="25" Margin="36,280,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="62" TextAlignment="Center" Grid.Column="1"/>
+        <Button x:Name="ReTarpit" HorizontalAlignment="Left" Height="25" Margin="128,10,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_1" Content="Relit" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReDrefia" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,40,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_2" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReKazo" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,70,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_3" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReForb" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,100,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_4" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReHell" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,130,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_5" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReEdron" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,160,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_6" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="RePoh" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,191,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_7" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReSvar" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,220,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_8" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReYala" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,250,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_9" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ReBBI" Content="Relit" HorizontalAlignment="Left" Height="25" Margin="128,279,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_10" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.273"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.029"/>
+                    <GradientStop Color="#FFE2EA36" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Beat Generation, Antica" HorizontalAlignment="Left" Height="24" Margin="172,327,0,0" VerticalAlignment="Top" Width="121" FontSize="10" Grid.Column="1"/>
+
+    </Grid>
+</Window>
